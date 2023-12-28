@@ -4,6 +4,31 @@
  */
 public class Reverse {
 	public static void main (String[] args){
-		//// Put your code here
+		
+		//receiving word from user
+		String word = "";
+		word = args[0];
+		
+		//creating a new string for the reversed word 
+		String newWord = "";
+		
+		//creating an integer to save the length of the word 
+		int n = word.length();
+		
+		//going through the word from end to begining 
+		//and saving every character into the new word
+		for(int i = n - 1; i >= 0; i--){
+			
+			newWord = newWord + word.charAt(i);
+		
+		}
+		
+		//printing the new word we created
+		System.out.println(newWord);
+		
+		//finding the middle character and printing it 
+		char middleChar = word.charAt(n/2);
+		System.out.println("The middle character is " + middleChar);
+		
 	}
 }

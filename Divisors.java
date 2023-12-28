@@ -3,6 +3,18 @@
  */
 public class Divisors {
 	public static void main (String[] args) {
-		//// Put your code here
+		
+		//recieving number from user
+		int x = 0;
+		x = Integer.parseInt(args[0]);
+		
+		//checkimg what are the divisors of x
+		for(int i = 1; i <= x; i++){
+			if (x % i == 0){
+				System.out.println(i);
+			}
+		
+		}
+		
 	}
 }

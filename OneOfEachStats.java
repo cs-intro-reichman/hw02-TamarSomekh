@@ -15,6 +15,72 @@ public class OneOfEachStats {
 		// Initailizes a random numbers generator with the given seed value
         Random generator = new Random(seed);  
 		
+		boolean girl = false;
+		boolean boy = false;
+		
+		double avg = 0;
+		int children = 0;
+		int two = 0;
+		int three = 0;
+		int four = 0;
+		int childSum = 0;
+		
+		String str = "";
+		char g = 'g';
+		char b = 'b';
+		
+		for(int i = 0; i < T; i++){
+			girl = false;
+			boy = false;
+			children = 0;
+			do{
+				double rnd = generator.nextDouble();
+				if(rnd < 0.5){
+					girl = true;
+					children = children + 1;
+				}
+				else{
+					boy = true;
+					children = children + 1;
+				}
+				
+			}while((girl != true) || (boy != true));
+			
+			if(children == 2){
+				two = two +1;
+			}else if(children == 3){
+				three = three +1;
+			}else if(children >= 4){
+				four = four +1;
+			}
+			
+			childSum = childSum + children;
+		
+		}
+		
+		avg = (Double.valueOf(childSum) / Double.valueOf(T));
+		
+		System.out.println("Average: " + avg + " children to get at least one of each gender.");
+		System.out.println("Number of families with 2 children: " + two );
+		System.out.println("Number of families with 3 children: " + three );
+		System.out.println("Number of families with 4 or more children: " + four );
+		
+		if(two > three && two > four){
+			System.out.println("The most common number of children is 2.");
+		}else if(three > two && three > four){
+			System.out.println("The most common number of children is 3.");
+		}else if(four > two && four > three){
+			System.out.println("The most common number of children is 4 or more.");
+		}else if(two == three || two == four){
+			System.out.println("The most common number of children is 2.");
+		}else if(three == four){
+			System.out.println("The most common number of children is 3.");
+		}
+		
+		
+		
+		
+		
 		//// In the previous version of this program, you used a statement like:
 		//// double rnd = Math.random();
 		//// Where "rnd" is the variable that stores the generated random value.
