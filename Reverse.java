@@ -29,11 +29,9 @@ public class Reverse {
 		//finding the middle character and printing it 
 		char middleChar = ' ';
 		if (word.length() % 2 == 0){
-			middleChar = word.charAt((n/2)+1);
-		}
-		else{
 			middleChar = word.charAt(n/2);
 		}
+		
 		System.out.println("The middle character is " + middleChar);
 		
 	}
