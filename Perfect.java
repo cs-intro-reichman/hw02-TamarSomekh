@@ -11,7 +11,7 @@ public class Perfect {
 		int sum = 0;
 		
 		//creating the string of the answer
-		String strOG = n + " is a perfect number since = 1";
+		String strOG = n + " is a perfect number since " + n + " = 1";
 		String str = strOG;
 		
 		//a loop that will add dividors to the string
