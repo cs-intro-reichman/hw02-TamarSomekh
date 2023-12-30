@@ -8,6 +8,8 @@ public class Perfect {
 		int n = 0;
 		n = Integer.parseInt(args[0]);
 		
+		int sum = 0;
+		
 		//creating the string of the answer
 		String strOG = n + " is a perfect number since = 1";
 		String str = strOG;
@@ -16,16 +18,17 @@ public class Perfect {
 		for(int i = 2; i < n; i++){
 			if (n % i == 0){
 				str = str + " + " + i;
+				sum = sum + i;
 			}
 		
 		}
 		
 		//if statemant that determines the answer
-		if(str == strOG){
-			System.out.print(n + " is not a perfect number");
+		if((sum+1) == n){
+			System.out.print(str);
 		}
 		else{
-			System.out.print(str);
+			System.out.print(n + " is not a perfect number");
 		}
 	}
 }
